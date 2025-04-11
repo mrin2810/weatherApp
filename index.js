@@ -44,6 +44,12 @@ async function getWeatherData(cityValue) {
       deats.appendChild(d);
     });
   } catch (error) {
-    console.log("Error Occured");
+    weatherData.querySelector(".icon").innerHTML = "";
+
+    weatherData.querySelector(".temperature").textContent = "";
+    weatherData.querySelector(".description").textContent =
+      "Error happened Please Try again Later";
+    const deats = weatherData.querySelector(".details");
+    deats.innerHTML = "";
   }
 }
