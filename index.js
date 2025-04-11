@@ -31,7 +31,7 @@ async function getWeatherData(cityValue) {
 
     weatherData.querySelector(".icon").innerHTML = `<img
             src="http://openweathermap.org/img/wn/${icon}.png"
-            alt="Weather Icon"
+            alt="Weather Icon: ${desc}"
           />`;
 
     weatherData.querySelector(".temperature").textContent = `${temp}°C`;
